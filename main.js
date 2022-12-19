@@ -24,7 +24,7 @@ let selectedCity;
     }
     //3. get cities data
     const getCitiesUsingGeoLocation = async(searchText)=>{
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=5&appid=${API_KEY}`);
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchText}&limit=5&appid=${API_KEY}`);
         return response.json();
     }
 
@@ -36,7 +36,7 @@ let selectedCity;
 
     //2. gets the icon URL for particular icon ID
 
-    const createIconURL = (icon) => `http://openweathermap.org/img/wn/${icon}@2x.png`;
+    const createIconURL = (icon) => `https://openweathermap.org/img/wn/${icon}@2x.png`;
 
     //3. formats time (04:00:00 to 4 PM)
     
